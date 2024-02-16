@@ -1,0 +1,22 @@
+{
+  "name": "senior-team-project",
+  "version": "1.0.0",
+  "description": "Test Project to demonstrate API usage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexBareli/SeniorTeamTest.git"
+  },
+  "keywords": [
+    "Test"
+  ],
+  "author": "Alexander Bareli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexBareli/SeniorTeamTest/issues"
+  },
+  "homepage": "https://github.com/AlexBareli/SeniorTeamTest#readme"
+}
