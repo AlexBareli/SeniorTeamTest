@@ -31,7 +31,8 @@ const getTodoLists = (request, response) => {
 
 // Post
 const createTodoItem = (request, response) => {
-    const {todo_list_id, content, due_date, completed} = request.body
+    const todo_list_id = parseInt(request.params.listid)
+    const {content, due_date, completed} = request.body
     pool.query('INSERT INTO todo_items (todo_list_id, content, due_date, completed) VALUES ($1, $2, $3, $4)',
          [todo_list_id, content, due_date, completed], (error, results) => {
         if (error) {
@@ -43,7 +44,7 @@ const createTodoItem = (request, response) => {
 
 // Get
 const getTodoItems = (request, response) => {
-    const {todo_list_id} = request.body
+    const todo_list_id = parseInt(request.params.listid)
     pool.query('SELECT * FROM todo_items WHERE todo_list_id = $1', [todo_list_id], (error, results) => {
         if (error) {
             throw error
